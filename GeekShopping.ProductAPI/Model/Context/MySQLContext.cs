@@ -119,7 +119,6 @@ namespace GeekShopping.ProductAPI.Model.Context
                 ImageUrl = "https://github.com/leandrocgsi/erudio-microservices-dotnet6/blob/main/ShoppingImages/13_dragon_ball.jpg",
                 CategoryName = "T-shirt"
             });
-
         }
     }
 }

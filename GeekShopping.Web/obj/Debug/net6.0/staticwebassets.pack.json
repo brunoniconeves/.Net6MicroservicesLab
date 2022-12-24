@@ -13,6 +13,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "A:\\Projetos\\microservicos_dotnet\\S07_ErudioMicroservices.NET6-FirstMicrosservices\\GeekShopping\\GeekShopping.Web\\wwwroot\\images\\favicon.png",
+      "PackagePath": "staticwebassets\\images\\favicon.png"
+    },
+    {
+      "Id": "A:\\Projetos\\microservicos_dotnet\\S07_ErudioMicroservices.NET6-FirstMicrosservices\\GeekShopping\\GeekShopping.Web\\wwwroot\\images\\geek_shopping.png",
+      "PackagePath": "staticwebassets\\images\\geek_shopping.png"
+    },
+    {
       "Id": "A:\\Projetos\\microservicos_dotnet\\S07_ErudioMicroservices.NET6-FirstMicrosservices\\GeekShopping\\GeekShopping.Web\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "rOky91cEJA70hyLw06BlpOOVURuMp1xr9x7LXPNv8CQ=",
+  "Hash": "dLiJUASx6p+Fll6R6YAov5u6oM2v4jPJD8HDMCrNKC8=",
   "Source": "GeekShopping.Web",
   "BasePath": "_content/GeekShopping.Web",
   "Mode": "Default",
@@ -83,6 +83,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "A:\\Projetos\\microservicos_dotnet\\S07_ErudioMicroservices.NET6-FirstMicrosservices\\GeekShopping\\GeekShopping.Web\\wwwroot\\images\\favicon.png",
+      "SourceId": "GeekShopping.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "A:\\Projetos\\microservicos_dotnet\\S07_ErudioMicroservices.NET6-FirstMicrosservices\\GeekShopping\\GeekShopping.Web\\wwwroot\\",
+      "BasePath": "_content/GeekShopping.Web",
+      "RelativePath": "images/favicon.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\favicon.png"
+    },
+    {
+      "Identity": "A:\\Projetos\\microservicos_dotnet\\S07_ErudioMicroservices.NET6-FirstMicrosservices\\GeekShopping\\GeekShopping.Web\\wwwroot\\images\\geek_shopping.png",
+      "SourceId": "GeekShopping.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "A:\\Projetos\\microservicos_dotnet\\S07_ErudioMicroservices.NET6-FirstMicrosservices\\GeekShopping\\GeekShopping.Web\\wwwroot\\",
+      "BasePath": "_content/GeekShopping.Web",
+      "RelativePath": "images/geek_shopping.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\geek_shopping.png"
     },
     {
       "Identity": "A:\\Projetos\\microservicos_dotnet\\S07_ErudioMicroservices.NET6-FirstMicrosservices\\GeekShopping\\GeekShopping.Web\\wwwroot\\js\\site.js",

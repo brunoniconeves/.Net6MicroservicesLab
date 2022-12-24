@@ -49,3 +49,4 @@ A:\Projetos\microservicos_dotnet\S07_ErudioMicroservices.NET6-FirstMicrosservice
 A:\Projetos\microservicos_dotnet\S07_ErudioMicroservices.NET6-FirstMicrosservices\GeekShopping\GeekShopping.ProductAPI\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
 A:\Projetos\microservicos_dotnet\S07_ErudioMicroservices.NET6-FirstMicrosservices\GeekShopping\GeekShopping.ProductAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.Annotations.dll
 A:\Projetos\microservicos_dotnet\S07_ErudioMicroservices.NET6-FirstMicrosservices\GeekShopping\GeekShopping.ProductAPI\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+A:\Projetos\microservicos_dotnet\S07_ErudioMicroservices.NET6-FirstMicrosservices\GeekShopping\GeekShopping.ProductAPI\bin\Debug\net6.0\GeekShopping.ProductAPI.staticwebassets.runtime.json

@@ -29,6 +29,7 @@ namespace GeekShopping.ProductAPI.Repository
         {
             Product product = await _context.Products.Where(p => p.Id == id)
                 .FirstOrDefaultAsync();
+            _context.Entry(product).State = EntityState.Detached;
             return _mapper.Map<ProductVO>(product);
         }
 
@@ -42,10 +43,15 @@ namespace GeekShopping.ProductAPI.Repository
 
         public async Task<ProductVO> Update(ProductVO productVO)
         {
-            Product product = _mapper.Map<Product>(productVO);
-            _context.Products.Update(product);
-            await _context.SaveChangesAsync();
-            return productVO;
+          try
+          {
+              Product product = _mapper.Map<Product>(productVO);
+              _context.Update(product);
+              await _context.SaveChangesAsync();
+              return productVO;
+          } catch(Exception ex) {
+              return null;
+          }
         }
 
         public async Task<bool> Delete(long id)

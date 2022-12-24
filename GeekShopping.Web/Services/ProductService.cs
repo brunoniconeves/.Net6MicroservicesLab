@@ -1,32 +1,65 @@
 ﻿using GeekShopping.Web.Models;
 using GeekShopping.Web.Services.IServices;
+using GeekShopping.Web.Utils;
 
 namespace GeekShopping.Web.Services
 {
     public class ProductService : IProductService
     {
-        public Task<IEnumerable<ProductModel>> FindAll()
+        private readonly HttpClient _client;
+        public const string BasePath = "api/v1/product";
+
+        public ProductService(HttpClient client)
         {
-            throw new NotImplementedException();
+            _client = client ?? throw new ArgumentNullException(nameof(client));
         }
 
-        public Task<ProductModel> FindById(long id)
+        public async Task<IEnumerable<ProductModel>> FindAll()
         {
-            throw new NotImplementedException();
-        }
-        public Task<ProductModel> Create(ProductModel product)
-        {
-            throw new NotImplementedException();
+            var response = await _client.GetAsync(BasePath);
+            return await response.ReadContentAs<List<ProductModel>>();
         }
 
-        public Task<ProductModel> Update(ProductModel product)
+        public async Task<ProductModel> FindById(long id)
         {
-            throw new NotImplementedException();
+            var response = await _client.GetAsync($"{BasePath}/{id}");
+            return await response.ReadContentAs<ProductModel>();
+        }
+        public async Task<ProductModel> Create(ProductModel product)
+        {
+            var response = await _client.PostAsJson(BasePath, product);
+            if (response.IsSuccessStatusCode)
+            {
+                return await response.ReadContentAs<ProductModel>();
+            } else {            
+                throw new ApplicationException($"something went wrong calling the API");
+            }
         }
 
-        public Task<bool> DeleteById(long id)
+        public async Task<ProductModel> Update(ProductModel product)
         {
-            throw new NotImplementedException();
+            var response = await _client.PutAsJson(BasePath, product);
+            if (response.IsSuccessStatusCode)
+            {
+                return await response.ReadContentAs<ProductModel>();
+            }
+            else
+            {
+                throw new ApplicationException($"something went wrong calling the API:");
+            }
+        }
+
+        public async Task<bool> DeleteById(long id)
+        {
+            var response = await _client.DeleteAsync($"{BasePath}/{id}");
+            if (response.IsSuccessStatusCode)
+            {
+                return true;
+            }
+            else
+            {
+                throw new ApplicationException($"something went wrong calling the API");
+            }
         }
     }
 }

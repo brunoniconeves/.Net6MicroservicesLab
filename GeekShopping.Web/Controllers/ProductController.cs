@@ -30,7 +30,7 @@ namespace GeekShopping.Web.Controllers
 
         [Authorize]
         [HttpPost]
-        public async Task<IActionResult> ProductCreate(ProductModel product)
+        public async Task<IActionResult> ProductCreate(ProductViewModel product)
         {
             if(ModelState.IsValid){
                 var token = await HttpContext.GetTokenAsync("access_token");
@@ -51,7 +51,7 @@ namespace GeekShopping.Web.Controllers
 
         [Authorize]
         [HttpPost]
-        public async Task<IActionResult> ProductUpdate(ProductModel product)
+        public async Task<IActionResult> ProductUpdate(ProductViewModel product)
         {
             if(ModelState.IsValid){
                 var token = await HttpContext.GetTokenAsync("access_token");
@@ -73,7 +73,7 @@ namespace GeekShopping.Web.Controllers
         
         [HttpPost]
         [Authorize(Roles = Role.Admin)]
-        public async Task<IActionResult> ProductDelete(ProductModel product)
+        public async Task<IActionResult> ProductDelete(ProductViewModel product)
         {
             var token = await HttpContext.GetTokenAsync("access_token");
             var response = await _productService.DeleteById(product.Id, token);

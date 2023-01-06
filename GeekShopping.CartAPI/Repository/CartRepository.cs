@@ -79,7 +79,7 @@ namespace GeekShopping.CartAPI.Repository
           _context.CartHeaders.Remove(cartHeaderToRemove);
         }
 
-        _context.SaveChangesAsync();
+        await _context.SaveChangesAsync();
 
         return true;
       }catch (Exception){
